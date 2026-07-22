@@ -8,11 +8,7 @@ When you only have a single pane open everything looks normal. However, when you
 
 When you split your workspace into two or more panes, every pane except the one you're actively working in, fades to a lower opacity — still fully readable, just visually out of the way. When you switch panes (click, keyboard shortcut etc) the dimming follows your focus instantly.
 
-[Watch the demo](dim-lights-obsidian-demo.mp4)
-
-<!-- For an inline-playable preview instead of a download link: open this file on github.com,
-     click "Edit", drag dim-lights-obsidian-demo.mp4 into the edit box, GitHub will upload it
-     and generate a user-attachments URL you can paste here in place of the link above. -->
+https://github.com/user-attachments/assets/c55e804a-0fdc-4ea1-a728-468505f9be1e
 
 ## Commands
 
