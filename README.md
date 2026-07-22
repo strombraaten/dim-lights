@@ -4,9 +4,15 @@ This plugin dims the panes you're not working on, so you can keep a sharper focu
 
 ## How it works
 
-When you open a single pane everything looks normal. However, when you split your workspace into two or more panes, every pane except the one you're actively working in, fades to a lower opacity — still fully readable, just visually out of the way. When you switch panes (click, keyboard shortcut etc) the dimming follows your focus instantly.
+When you only have a single pane open everything looks normal. However, when you open another one that's when things get interesting.
 
-<!-- TODO: demo GIF or before/after screenshot showing an active pane at full brightness next to a dimmed inactive pane -->
+When you split your workspace into two or more panes, every pane except the one you're actively working in, fades to a lower opacity — still fully readable, just visually out of the way. When you switch panes (click, keyboard shortcut etc) the dimming follows your focus instantly.
+
+[Watch the demo](dim-lights-obsidian-demo.mp4)
+
+<!-- For an inline-playable preview instead of a download link: open this file on github.com,
+     click "Edit", drag dim-lights-obsidian-demo.mp4 into the edit box, GitHub will upload it
+     and generate a user-attachments URL you can paste here in place of the link above. -->
 
 ## Commands
 
