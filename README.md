@@ -1,6 +1,6 @@
-# Dim the lights while working in Obsidian
+# Dim Lights
 
-This plugin dims the panes you're not working on, so you can keep a sharper focus on the one you're writing in.
+Dim the lights while working in Obsidian. This plugin dims the panes you're not working on, so you can keep a sharper focus on the one you're writing in.
 
 ## How it works
 
