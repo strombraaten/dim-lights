@@ -1,4 +1,4 @@
-import { App, PluginSettingTab, Setting } from "obsidian";
+import { App, PluginSettingTab } from "obsidian";
 import type { SettingDefinitionItem } from "obsidian";
 import type DimLightsPlugin from "./main";
 
@@ -23,12 +23,7 @@ export class DimLightsSettingTab extends PluginSettingTab {
 		this.plugin = plugin;
 	}
 
-	/**
-	 * Declarative settings (Obsidian 1.13.0+) so this plugin's settings show up in
-	 * Obsidian's built-in settings search. On older Obsidian versions this method
-	 * doesn't exist on the base class, so `display()` below is used instead as a
-	 * fallback — kept in sync with the definitions here.
-	 */
+	/** Declarative settings (Obsidian 1.13.0+) so these show up in Obsidian's built-in settings search. */
 	getSettingDefinitions(): SettingDefinitionItem[] {
 		return [
 			{
@@ -51,35 +46,5 @@ export class DimLightsSettingTab extends PluginSettingTab {
 			this.plugin.applyLightLevelVariable();
 		}
 		this.plugin.refreshDimming();
-	}
-
-	display(): void {
-		const { containerEl } = this;
-		containerEl.empty();
-
-		new Setting(containerEl)
-			.setName("Enable dimming")
-			.setDesc("Dim every pane except the one you're focused on whenever more than one is open.")
-			.addToggle((toggle) =>
-				toggle.setValue(this.plugin.settings.enabled).onChange(async (value) => {
-					this.plugin.settings.enabled = value;
-					await this.plugin.saveSettings();
-					this.plugin.refreshDimming();
-				})
-			);
-
-		new Setting(containerEl)
-			.setName("Light level")
-			.setDesc("Turn the lights down on inactive panes — 0 is pitch black, 100 is full brightness.")
-			.addSlider((slider) =>
-				slider
-					.setLimits(0, 100, 5)
-					.setValue(this.plugin.settings.lightLevel)
-					.onChange(async (value) => {
-						this.plugin.settings.lightLevel = value;
-						await this.plugin.saveSettings();
-						this.plugin.applyLightLevelVariable();
-					})
-			);
 	}
 }
